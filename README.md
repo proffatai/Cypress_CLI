@@ -19,3 +19,35 @@ Examples: `npx cypress run --browser chrome` <= This will set the test browser t
 use , to add more config parameter
 e.g npx cypress run --config watchForFileChanges=false, defaultCommandTimeout=2444 -b edge -s .\cypress\e2e\login_test_cases.cy.js
 Here, our spec file is inside the e2e folder
+
+## To verify that cypress was installed properly
+`npx cypress verify`
+
+## Analyzing package.json file
+
+When we run the command `npm init -y`, the package.json file is created to help us handle and manage all node packages we use in our project.
+
+Below shows a sample
+{
+  "name": "cypress_cli",  // name of the project, max acceptabele characters=214, must not start with . or _ and cant contain uppercase letter
+  "version": "1.0.0",
+  "description": "Firstly, open command line inside the cypress project", // we can provide more description about the project here
+  "main": "index.js", we specify the main js file
+  "scripts": { // script section where we can create custom commands
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proffatai/Cypress_CLI.git"
+  },
+  "keywords": [], // Array of strings and it is provided so people can easily locate our project online
+  "author": "", // the name of the author
+  "license": "ISC",
+   "dependencies": { // this holds all the dependencies / packages we used in this project. THis allows others to just run npm install and all the dependencies with the exact version used in the project gets installed
+    "cypress": "^10.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/proffatai/Cypress_CLI/issues"
+  },
+  "homepage": "https://github.com/proffatai/Cypress_CLI#readme"
+}
