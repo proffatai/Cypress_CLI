@@ -11,7 +11,7 @@ Examples: `npx cypress run --browser chrome` <= This will set the test browser t
 
 `npx cypress run --spec locnOfSpec.js` 
 
-`npx cypress run -b chrome -s locnOfSpec.js`, here we set the browser type to chrome, we provided a specific test / spec file to run otherwise it runs all the spec files inside the integration/e2e folder
+`npx cypress run -b chrome -s locnOfSpec.js --e2e`, here we set the browser type to chrome, we provided a specific test / spec file to run and also stated we wanted to perform e2e, otherwise it runs all the spec files inside the integration/e2e folder
 
 ## Setting configurations from command line
 
