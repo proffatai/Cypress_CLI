@@ -9,7 +9,9 @@ For more info: run `npx cypress run --help` to see all other commands you can us
 
 Examples: `npx cypress run --browser chrome` <= This will set the test browser to chrome instead of the default electron. We can use firefox,edge and brave too
 
-`npx cypress run --spec locnOfSpec.js` 
+`npx cypress run --spec locnOfSpec.js`  
+NB: location of the spec file is easy and should start from the cypress folder. E.g, say we have our spec file in the root of the integration folder, we can say: npx cypress run --spec cypress/integration/specName.js
+Do not include the path in a double quote, write it directly
 
 `npx cypress run -b chrome -s locnOfSpec.js --e2e`, here we set the browser type to chrome, we provided a specific test / spec file to run and also stated we wanted to perform e2e, otherwise it runs all the spec files inside the integration/e2e folder
 
